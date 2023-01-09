@@ -11,3 +11,4 @@ The raw data used in this project can be found in the "raw_data" folder.
 
 The code used to clean the raw data can be found in "clean_data.ipynb"
 
+The cleaned dataset used in this project can be found in "cleaned.csv"
