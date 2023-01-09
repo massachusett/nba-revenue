@@ -1,0 +1,331 @@
+,Year,Team,Followers,Franch_Val
+0,2011,Atlanta Hawks,0.2,295
+1,2012,Atlanta Hawks,0.35,270
+2,2013,Atlanta Hawks,0.52,316
+3,2014,Atlanta Hawks,1.2,425
+4,2015,Atlanta Hawks,1.78,825
+5,2016,Atlanta Hawks,2.24,825
+6,2017,Atlanta Hawks,2.71,885
+7,2018,Atlanta Hawks,2.79,"1,150"
+8,2019,Atlanta Hawks,2.81,"1,300"
+9,2020,Atlanta Hawks,2.78,"1,520"
+10,2021,Atlanta Hawks,2.89,"1,680"
+11,2011,Boston Celtics,6.85,452
+12,2012,Boston Celtics,7.48,482
+13,2013,Boston Celtics,8.22,730
+14,2014,Boston Celtics,10.05,875
+15,2015,Boston Celtics,10.32,"1,700"
+16,2016,Boston Celtics,10.73,"2,100"
+17,2017,Boston Celtics,11.5,"2,200"
+18,2018,Boston Celtics,12.21,"2,500"
+19,2019,Boston Celtics,12.51,"2,800"
+20,2020,Boston Celtics,12.37,"3,100"
+21,2021,Boston Celtics,12.3,"3,550"
+22,2011,Brooklyn Nets,0.2,312
+23,2012,Brooklyn Nets,0.52,357
+24,2013,Brooklyn Nets,1.46,530
+25,2014,Brooklyn Nets,2.71,780
+26,2015,Brooklyn Nets,3.2,"1,500"
+27,2016,Brooklyn Nets,3.47,"1,700"
+28,2017,Brooklyn Nets,3.61,"1,800"
+29,2018,Brooklyn Nets,3.68,"2,300"
+30,2019,Brooklyn Nets,3.7,"2,350"
+31,2020,Brooklyn Nets,3.82,"2,500"
+32,2021,Brooklyn Nets,4.37,"3,200"
+33,2011,Charlotte Hornets,0.1,281
+34,2012,Charlotte Hornets,0.2,277
+35,2013,Charlotte Hornets,0.35,315
+36,2014,Charlotte Hornets,1.19,410
+37,2015,Charlotte Hornets,1.82,725
+38,2016,Charlotte Hornets,2.31,750
+39,2017,Charlotte Hornets,2.54,780
+40,2018,Charlotte Hornets,2.62,"1,050"
+41,2019,Charlotte Hornets,2.69,"1,250"
+42,2020,Charlotte Hornets,2.68,"1,500"
+43,2021,Charlotte Hornets,2.71,"1,575"
+44,2011,Chicago Bulls,6.2,511
+45,2012,Chicago Bulls,7.51,600
+46,2013,Chicago Bulls,10.08,800
+47,2014,Chicago Bulls,17.69,"1,000"
+48,2015,Chicago Bulls,20.28,"2,000"
+49,2016,Chicago Bulls,21.62,"2,300"
+50,2017,Chicago Bulls,22.75,"2,500"
+51,2018,Chicago Bulls,22.44,"2,600"
+52,2019,Chicago Bulls,21.84,"2,900"
+53,2020,Chicago Bulls,21.49,"3,200"
+54,2021,Chicago Bulls,21.3,"3,650"
+55,2011,Cleveland Cavaliers,0.92,355
+56,2012,Cleveland Cavaliers,1.03,329
+57,2013,Cleveland Cavaliers,1.24,434
+58,2014,Cleveland Cavaliers,2.61,515
+59,2015,Cleveland Cavaliers,5.22,915
+60,2016,Cleveland Cavaliers,8.6,"1,100"
+61,2017,Cleveland Cavaliers,11.5,"1,200"
+62,2018,Cleveland Cavaliers,11.84,"1,325"
+63,2019,Cleveland Cavaliers,11.89,"1,275"
+64,2020,Cleveland Cavaliers,11.55,"1,510"
+65,2021,Cleveland Cavaliers,11.34,"1,650"
+66,2011,Dallas Mavericks,2.33,438
+67,2012,Dallas Mavericks,2.59,497
+68,2013,Dallas Mavericks,2.94,685
+69,2014,Dallas Mavericks,4.26,765
+70,2015,Dallas Mavericks,5.03,"1,150"
+71,2016,Dallas Mavericks,5.5,"1,400"
+72,2017,Dallas Mavericks,5.89,"1,450"
+73,2018,Dallas Mavericks,6,"1,900"
+74,2019,Dallas Mavericks,5.97,"2,250"
+75,2020,Dallas Mavericks,6.07,"2,400"
+76,2021,Dallas Mavericks,6.22,"2,700"
+77,2011,Denver Nuggets,0.64,316
+78,2012,Denver Nuggets,0.97,316
+79,2013,Denver Nuggets,1.26,427
+80,2014,Denver Nuggets,1.99,495
+81,2015,Denver Nuggets,2.24,855
+82,2016,Denver Nuggets,2.48,855
+83,2017,Denver Nuggets,2.66,890
+84,2018,Denver Nuggets,2.75,"1,125"
+85,2019,Denver Nuggets,2.92,"1,375"
+86,2020,Denver Nuggets,2.98,"1,600"
+87,2021,Denver Nuggets,3.14,"1,725"
+88,2011,Detroit Pistons,0.45,360
+89,2012,Detroit Pistons,0.54,332
+90,2013,Detroit Pistons,0.71,400
+91,2014,Detroit Pistons,1.51,450
+92,2015,Detroit Pistons,1.9,810
+93,2016,Detroit Pistons,2.42,850
+94,2017,Detroit Pistons,2.62,900
+95,2018,Detroit Pistons,2.71,"1,100"
+96,2019,Detroit Pistons,2.7,"1,270"
+97,2020,Detroit Pistons,2.98,"1,450"
+98,2021,Detroit Pistons,3,"1,580"
+99,2011,Golden State Warriors,0.28,363
+100,2012,Golden State Warriors,0.47,450
+101,2013,Golden State Warriors,0.79,555
+102,2014,Golden State Warriors,2.9,750
+103,2015,Golden State Warriors,5.58,"1,300"
+104,2016,Golden State Warriors,11.54,"1,900"
+105,2017,Golden State Warriors,15.73,"2,600"
+106,2018,Golden State Warriors,16.72,"3,100"
+107,2019,Golden State Warriors,18.02,"3,500"
+108,2020,Golden State Warriors,17.99,"4,300"
+109,2021,Golden State Warriors,18.32,"5,600"
+110,2011,Houston Rockets,0.35,443
+111,2012,Houston Rockets,0.68,453
+112,2013,Houston Rockets,1.02,568
+113,2014,Houston Rockets,2.94,775
+114,2015,Houston Rockets,4.07,"1,250"
+115,2016,Houston Rockets,4.95,"1,500"
+116,2017,Houston Rockets,5.86,"1,650"
+117,2018,Houston Rockets,6.36,"2,200"
+118,2019,Houston Rockets,15.46,"2,300"
+119,2020,Houston Rockets,17.97,"2,475"
+120,2021,Houston Rockets,18.71,"2,750"
+121,2011,Indiana Pacers,0.18,269
+122,2012,Indiana Pacers,0.3,283
+123,2013,Indiana Pacers,0.59,383
+124,2014,Indiana Pacers,2.98,475
+125,2015,Indiana Pacers,3.62,830
+126,2016,Indiana Pacers,4.09,840
+127,2017,Indiana Pacers,4.33,880
+128,2018,Indiana Pacers,4.43,"1,175"
+129,2019,Indiana Pacers,4.45,"1,400"
+130,2020,Indiana Pacers,4.38,"1,525"
+131,2021,Indiana Pacers,4.43,"1,670"
+132,2011,Los Angeles Clippers,0.32,305
+133,2012,Los Angeles Clippers,0.68,324
+134,2013,Los Angeles Clippers,1.23,430
+135,2014,Los Angeles Clippers,3.34,575
+136,2015,Los Angeles Clippers,4.14,"1,600"
+137,2016,Los Angeles Clippers,4.82,"2,000"
+138,2017,Los Angeles Clippers,5.13,"2,000"
+139,2018,Los Angeles Clippers,5.22,"2,150"
+140,2019,Los Angeles Clippers,5.28,"2,200"
+141,2020,Los Angeles Clippers,5.39,"2,600"
+142,2021,Los Angeles Clippers,5.58,"3,300"
+143,2011,Los Angeles Lakers,15,643
+144,2012,Los Angeles Lakers,17.36,900
+145,2013,Los Angeles Lakers,20,"1,000"
+146,2014,Los Angeles Lakers,25.04,"1,350"
+147,2015,Los Angeles Lakers,25.72,"2,600"
+148,2016,Los Angeles Lakers,27.05,"2,700"
+149,2017,Los Angeles Lakers,28.66,"3,000"
+150,2018,Los Angeles Lakers,28.91,"3,300"
+151,2019,Los Angeles Lakers,29.57,"3,700"
+152,2020,Los Angeles Lakers,31.02,"4,400"
+153,2021,Los Angeles Lakers,31.8,"5,500"
+154,2011,Memphis Grizzlies,0.15,266
+155,2012,Memphis Grizzlies,0.27,269
+156,2013,Memphis Grizzlies,0.49,377
+157,2014,Memphis Grizzlies,1.47,453
+158,2015,Memphis Grizzlies,2.05,750
+159,2016,Memphis Grizzlies,2.42,780
+160,2017,Memphis Grizzlies,2.65,790
+161,2018,Memphis Grizzlies,2.73,"1,025"
+162,2019,Memphis Grizzlies,2.8,"1,200"
+163,2020,Memphis Grizzlies,2.89,"1,300"
+164,2021,Memphis Grizzlies,2.98,"1,500"
+165,2011,Miami Heat,6.2,425
+166,2012,Miami Heat,7.62,457
+167,2013,Miami Heat,10.4,625
+168,2014,Miami Heat,18.32,770
+169,2015,Miami Heat,19.19,"1,175"
+170,2016,Miami Heat,19.76,"1,300"
+171,2017,Miami Heat,20.41,"1,350"
+172,2018,Miami Heat,20.41,"1,700"
+173,2019,Miami Heat,19.97,"1,750"
+174,2020,Miami Heat,19.64,"1,950"
+175,2021,Miami Heat,19.43,"2,300"
+176,2011,Milwaukee Bucks,0.21,258
+177,2012,Milwaukee Bucks,0.3,268
+178,2013,Milwaukee Bucks,0.46,312
+179,2014,Milwaukee Bucks,1.03,405
+180,2015,Milwaukee Bucks,1.46,600
+181,2016,Milwaukee Bucks,1.92,675
+182,2017,Milwaukee Bucks,2.19,785
+183,2018,Milwaukee Bucks,2.29,"1,075"
+184,2019,Milwaukee Bucks,2.92,"1,350"
+185,2020,Milwaukee Bucks,3.12,"1,580"
+186,2021,Milwaukee Bucks,3.59,"1,900"
+187,2011,Minnesota Timberwolves,0.22,264
+188,2012,Minnesota Timberwolves,0.32,272
+189,2013,Minnesota Timberwolves,0.51,364
+190,2014,Minnesota Timberwolves,1.4,430
+191,2015,Minnesota Timberwolves,1.91,625
+192,2016,Minnesota Timberwolves,2.34,720
+193,2017,Minnesota Timberwolves,2.57,770
+194,2018,Minnesota Timberwolves,2.69,"1,060"
+195,2019,Minnesota Timberwolves,2.84,"1,260"
+196,2020,Minnesota Timberwolves,2.85,"1,375"
+197,2021,Minnesota Timberwolves,2.82,"1,550"
+198,2011,New Orleans Pelicans,0.21,280
+199,2012,New Orleans Pelicans,0.35,285
+200,2013,New Orleans Pelicans,0.53,340
+201,2014,New Orleans Pelicans,1.22,420
+202,2015,New Orleans Pelicans,1.77,650
+203,2016,New Orleans Pelicans,2.14,650
+204,2017,New Orleans Pelicans,2.36,750
+205,2018,New Orleans Pelicans,2.44,"1,000"
+206,2019,New Orleans Pelicans,2.73,"1,220"
+207,2020,New Orleans Pelicans,2.84,"1,350"
+208,2021,New Orleans Pelicans,2.86,"1,525"
+209,2011,New York Knicks,2.69,655
+210,2012,New York Knicks,3.26,780
+211,2013,New York Knicks,4.55,"1,100"
+212,2014,New York Knicks,6.38,"1,400"
+213,2015,New York Knicks,6.91,"2,500"
+214,2016,New York Knicks,7.61,"3,000"
+215,2017,New York Knicks,8,"3,300"
+216,2018,New York Knicks,8.19,"3,600"
+217,2019,New York Knicks,7.93,"4,000"
+218,2020,New York Knicks,7.81,"4,600"
+219,2021,New York Knicks,7.9,"5,800"
+220,2011,Oklahoma City Thunder,1.24,329
+221,2012,Oklahoma City Thunder,1.83,348
+222,2013,Oklahoma City Thunder,2.7,475
+223,2014,Oklahoma City Thunder,5.9,590
+224,2015,Oklahoma City Thunder,6.7,930
+225,2016,Oklahoma City Thunder,8.08,950
+226,2017,Oklahoma City Thunder,9.77,"1,025"
+227,2018,Oklahoma City Thunder,9.79,"1,250"
+228,2019,Oklahoma City Thunder,9.87,"1,475"
+229,2020,Oklahoma City Thunder,9.59,"1,575"
+230,2021,Oklahoma City Thunder,9.38,"1,630"
+231,2011,Orlando Magic,2.33,385
+232,2012,Orlando Magic,2.64,385
+233,2013,Orlando Magic,2.97,470
+234,2014,Orlando Magic,3.66,560
+235,2015,Orlando Magic,3.92,875
+236,2016,Orlando Magic,4.15,900
+237,2017,Orlando Magic,4.31,920
+238,2018,Orlando Magic,4.35,"1,225"
+239,2019,Orlando Magic,4.25,"1,325"
+240,2020,Orlando Magic,4.1,"1,430"
+241,2021,Orlando Magic,4.15,"1,640"
+242,2011,Philadelphia 76ers,0.36,330
+243,2012,Philadelphia 76ers,0.42,314
+244,2013,Philadelphia 76ers,0.59,418
+245,2014,Philadelphia 76ers,1.36,469
+246,2015,Philadelphia 76ers,1.81,700
+247,2016,Philadelphia 76ers,2.23,700
+248,2017,Philadelphia 76ers,2.67,800
+249,2018,Philadelphia 76ers,2.99,"1,180"
+250,2019,Philadelphia 76ers,3.55,"1,650"
+251,2020,Philadelphia 76ers,3.64,"2,000"
+252,2021,Philadelphia 76ers,3.74,"2,450"
+253,2011,Phoenix Suns,0.6,411
+254,2012,Phoenix Suns,0.87,395
+255,2013,Phoenix Suns,1.01,474
+256,2014,Phoenix Suns,1.86,565
+257,2015,Phoenix Suns,2.23,910
+258,2016,Phoenix Suns,2.46,"1,000"
+259,2017,Phoenix Suns,2.79,"1,100"
+260,2018,Phoenix Suns,2.88,"1,280"
+261,2019,Phoenix Suns,2.98,"1,500"
+262,2020,Phoenix Suns,2.96,"1,625"
+263,2021,Phoenix Suns,3.22,"1,800"
+264,2011,Portland Trail Blazers,0.44,356
+265,2012,Portland Trail Blazers,0.5,370
+266,2013,Portland Trail Blazers,0.66,457
+267,2014,Portland Trail Blazers,2,587
+268,2015,Portland Trail Blazers,2.58,940
+269,2016,Portland Trail Blazers,3.02,975
+270,2017,Portland Trail Blazers,3.38,"1,050"
+271,2018,Portland Trail Blazers,3.53,"1,300"
+272,2019,Portland Trail Blazers,3.66,"1,600"
+273,2020,Portland Trail Blazers,3.74,"1,850"
+274,2021,Portland Trail Blazers,3.81,"2,050"
+275,2011,Sacramento Kings,0.21,293
+276,2012,Sacramento Kings,0.3,300
+277,2013,Sacramento Kings,0.44,525
+278,2014,Sacramento Kings,1.21,550
+279,2015,Sacramento Kings,1.73,800
+280,2016,Sacramento Kings,2.26,925
+281,2017,Sacramento Kings,2.59,"1,075"
+282,2018,Sacramento Kings,2.72,"1,375"
+283,2019,Sacramento Kings,8.61,"1,575"
+284,2020,Sacramento Kings,8.8,"1,775"
+285,2021,Sacramento Kings,8.69,"2,000"
+286,2011,San Antonio Spurs,1.01,404
+287,2012,San Antonio Spurs,1.54,418
+288,2013,San Antonio Spurs,2.27,527
+289,2014,San Antonio Spurs,5.81,660
+290,2015,San Antonio Spurs,7.03,"1,000"
+291,2016,San Antonio Spurs,8.52,"1,150"
+292,2017,San Antonio Spurs,10.02,"1,175"
+293,2018,San Antonio Spurs,10.52,"1,550"
+294,2019,San Antonio Spurs,10.55,"1,625"
+295,2020,San Antonio Spurs,10.32,"1,800"
+296,2021,San Antonio Spurs,10.18,"1,980"
+297,2011,Toronto Raptors,0.22,399
+298,2012,Toronto Raptors,0.46,382
+299,2013,Toronto Raptors,0.67,405
+300,2014,Toronto Raptors,1.74,520
+301,2015,Toronto Raptors,2.57,920
+302,2016,Toronto Raptors,3.38,980
+303,2017,Toronto Raptors,3.67,"1,125"
+304,2018,Toronto Raptors,3.99,"1,400"
+305,2019,Toronto Raptors,4.78,"1,675"
+306,2020,Toronto Raptors,4.86,"2,100"
+307,2021,Toronto Raptors,5.02,"2,475"
+308,2011,Utah Jazz,0.32,343
+309,2012,Utah Jazz,0.45,335
+310,2013,Utah Jazz,0.61,432
+311,2014,Utah Jazz,1.1,525
+312,2015,Utah Jazz,1.4,850
+313,2016,Utah Jazz,1.66,875
+314,2017,Utah Jazz,1.87,910
+315,2018,Utah Jazz,1.96,"1,200"
+316,2019,Utah Jazz,2.75,"1,425"
+317,2020,Utah Jazz,2.81,"1,550"
+318,2021,Utah Jazz,3.22,"1,750"
+319,2011,Washington Wizards,0.13,322
+320,2012,Washington Wizards,0.25,328
+321,2013,Washington Wizards,0.38,397
+322,2014,Washington Wizards,1.01,485
+323,2015,Washington Wizards,1.61,900
+324,2016,Washington Wizards,2.05,960
+325,2017,Washington Wizards,2.29,"1,000"
+326,2018,Washington Wizards,2.38,"1,350"
+327,2019,Washington Wizards,2.55,"1,550"
+328,2020,Washington Wizards,5.74,"1,750"
+329,2021,Washington Wizards,6.31,"1,925"

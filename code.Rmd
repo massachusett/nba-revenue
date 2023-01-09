@@ -1,0 +1,467 @@
+---
+title: "Final Code"
+output: pdf_document
+urlcolor: blue
+---
+\textbf{Authors}: Matthew Smith, Joseph Doraid
+
+\textbf{Data Preparation}:
+
+```{r, include=TRUE}
+data <- read.csv('cleaned.csv', row.names='X')
+data$Franch_Val <- as.numeric(gsub(",","",data$Franch_Val))
+data$Franch_Val <- as.integer(data$Franch_Val)
+head(data)
+```
+
+\textbf{EDA}:
+
+Distribution of response and predictor variables:
+```{r, include=TRUE}
+
+ns <- colnames(subset(data, select=-c(Team, Year, Playoffs, CSF, CF, Finals, Championship, MPC1, MPC2, MPC3)))
+
+for (i in 1:length(ns)){
+  #png(paste('./Figures/', ns[i], '.png', sep=''))
+  hist(data[ns[i]])
+  #dev.off()
+}
+```
+
+Outliers for operating income:
+```{r, include=TRUE}
+data[order(data$OI),]
+```
+
+Outliers for APG:
+```{r, include=TRUE}
+data[order(data$APG),]
+```
+
+Correlation Matrix:
+```{r, include=TRUE}
+round(cor(subset(data, select=-c(Team, Playoffs, CSF, CF, Finals, Championship, Year))), 2)
+```
+
+
+Plotted relationships between ***OI***, ***Ticket***, ***Followers***,  and ***Revenue***:
+```{r, include=TRUE}
+#png('./Figures/tickets_v_rev.png')
+plot(data$Revenue ~ data$Ticket, main="Ticket Revenue vs. Total Revenue", xlab='Ticket Revenue (in million USD)', ylab='Total Revenue (in million USD)')
+#dev.off()
+
+#png('./Figures/oi_v_rev.png')
+plot(data$Revenue ~ data$OI, main="Operating Income vs. Total Revenue", xlab='Operating Income (in million USD)', ylab='Total Revenue (in million USD)')
+#dev.off()
+
+#png('./Figures/followers_v_rev.png')
+plot(data$Revenue ~ data$Followers, main="Social Media Followers vs. Total Revenue", xlab='Social Media Followers (in millions)', ylab='Total Revenue (in million USD)')
+#dev.off()
+```
+
+Plotted relationships between ***Revenue***, ***Ticket***, ***Followers***, ***OI***, and ***Franch_Val***:
+```{r, include=TRUE}
+#png('./Figures/rev_v_fv.png')
+plot(data$Franch_Val ~ data$Revenue, main="Total Revenue vs. Franchise Value", xlab='Total Revenue (in million USD)', ylab='Franchise Value (in million USD)')
+#dev.off()
+
+#png('./Figures/ticket_v_fv.png')
+plot(data$Franch_Val ~ data$Ticket, main="Ticket Revenue vs. Franchise Value", xlab='Ticket Revenue (in million USD)', ylab='Franchise Value (in million USD)')
+#dev.off()
+
+#png('./Figures/oi_v_fv.png')
+plot(data$Franch_Val ~ data$OI, main="Operating Income vs. Franchise Value", xlab='Operating Income (in million USD)', ylab='Franchise Value (in million USD)')
+#dev.off()
+
+#png('./Figures/followers_v_fv.png')
+plot(data$Franch_Val ~ data$Followers, main="Social Media Followers vs. Franchise Value", xlab='Social Media Followers (in millions)', ylab='Franchise Value (in million USD)')
+#dev.off()
+```
+
+```{r, include=TRUE}
+teams <- unique(data$Team)
+ymin <- min(data$Revenue) - 10
+ymax <- max(data$Revenue) + 10
+```
+
+Plot total revenue vs time by team:
+```{r, include=TRUE}
+par(mar=c(5, 4, 4, 8), xpd=TRUE)
+
+plot(data[data$Team == teams[1], ]$Revenue ~ data[data$Team == teams[1], ]$Year,
+     type='l',
+     ylim=c(ymin, ymax),
+     col=1,
+     xlab='Year',
+     ylab='Total Revenue (in million USD)',
+     main="Revenue vs. Time by Team")
+
+for (i in 1:length(teams)){
+  lines(data[data$Team == teams[i], ]$Revenue ~ data[data$Team == teams[i], ]$Year, lty=i, col=i)
+}
+
+legend("topright", inset=c(-0.3, 0), legend=teams, lty=1:length(teams), col=1:length(teams), pch=c(1,3), cex=0.5)
+```
+
+Plot total revenue vs time - Golden State Warriors:
+
+```{r, include=TRUE}
+plot(data[data$Team == 'Golden State Warriors', ]$Revenue ~ data[data$Team == 'Golden State Warriors', ]$Year,
+     type='l',
+     ylim=c(ymin, ymax),
+     xlab='Year',
+     ylab='Total Revenue (in million USD)',
+     main="Revenue vs. Time - Golden State Warriors")
+
+points(data[data$Team == 'Golden State Warriors', ]$Championship*data[data$Team == 'Golden State Warriors', ]$Revenue ~ data[data$Team == 'Golden State Warriors', ]$Year, col='red', pch=8)
+```
+
+Plot total revenue vs time - Miami Heat:
+
+```{r, include=TRUE}
+plot(data[data$Team == 'Miami Heat', ]$Revenue ~ data[data$Team == 'Miami Heat', ]$Year,
+     type='l',
+     ylim=c(ymin, ymax),
+     xlab='Year',
+     ylab='Total Revenue (in million USD)',
+     main="Revenue vs. Time - Miami Heat")
+
+points(data[data$Team == 'Miami Heat', ]$Championship*data[data$Team == 'Miami Heat', ]$Revenue ~ data[data$Team == 'Miami Heat', ]$Year, col='red', pch=8)
+```
+
+Plot total franchise value vs time by team:
+
+```{r, include=TRUE}
+teams <- unique(data$Team)
+ymin_frv <- min(data$Franch_Val) + 5
+ymax_frv <- max(data$Franch_Val) + 50
+```
+
+```{r, include=TRUE}
+par(mar=c(5, 4, 4, 8), xpd=TRUE)
+
+plot(data[data$Team == teams[1], ]$Franch_Val ~ data[data$Team == teams[1], ]$Year,
+     type='l',
+     ylim=c(ymin_frv, ymax_frv),
+     col=1,
+     xlab='Year',
+     ylab='Franchise Value (in million USD)',
+     main="Franchise Value vs. Time by Team")
+
+for (i in 1:length(teams)){
+  lines(data[data$Team == teams[i], ]$Franch_Val ~ data[data$Team == teams[i], ]$Year, lty=i, col=i)
+}
+
+legend("topright", inset=c(-0.3, 0), legend=teams, lty=1:length(teams), col=1:length(teams), pch=c(1,3), cex=0.5)
+```
+
+Plot total franchise value vs time - Golden State Warriors:
+
+```{r, include=TRUE}
+plot(data[data$Team == 'Golden State Warriors', ]$Franch_Val ~ data[data$Team == 'Golden State Warriors', ]$Year,
+     type='l',
+     ylim=c(ymin_frv+50, ymax_frv),
+     xlab='Year',
+     ylab='Franchise Value (in million USD)',
+     main="Franchise Value vs. Time - Golden State Warriors")
+
+points(data[data$Team == 'Golden State Warriors', ]$Championship*data[data$Team == 'Golden State Warriors', ]$Franch_Val ~ data[data$Team == 'Golden State Warriors', ]$Year, col='red', pch=8)
+```
+
+Plot total franchise value vs time - Miami Heat:
+
+```{r, include=TRUE}
+plot(data[data$Team == 'Miami Heat', ]$Franch_Val ~ data[data$Team == 'Miami Heat', ]$Year,
+     type='l',
+     ylim=c(ymin_frv+50, ymax_frv),
+     xlab='Year',
+     ylab='Franchise Value (in million USD)',
+     main="Franchise Value vs. Time - Miami Heat")
+
+points(data[data$Team == 'Miami Heat', ]$Championship*data[data$Team == 'Miami Heat', ]$Franch_Val ~ data[data$Team == 'Miami Heat', ]$Year, col='red', pch=8)
+```
+
+Significance testing - winning championships:
+
+```{r, include=TRUE}
+require(data.table)
+
+n = 9
+
+pvals <- rep(0, n)
+samples <- rep(0, n)
+
+results <- data.frame(Lag  = 1:n)
+
+DT <- as.data.table(data)
+```
+
+
+```{r, include=TRUE}
+for (i in 1:n) {
+  DT$RL <- DT[, .(RL=shift(.(Revenue), type="lead", n=i)[[1L]]), by=Team]$RL
+  DT$PC <- DT$RL / DT$Revenue
+  
+  png(paste('./Figures/rev_lag_', as.character(i), '.png', sep=''))
+  boxplot(DT$PC ~ DT$Championship,
+          main=paste('Future Revenue vs. Championship, Lag =', as.character(i)),
+          xlab='Championship indicator in year t',
+          ylab='Percentage change in revenue at year t + Lag')
+  dev.off()
+  
+  pvals[i] <- t.test(DT$PC ~ DT$Championship, alternative='less')[3]$p.value
+  samples[i] <- sum(!is.na(DT$PC))
+}
+```
+
+```{r, include=TRUE}
+results[['Number of Samples']] <- samples
+results[['Number of Championship Samples']] <- samples/30
+results[['P-Values, Revenue']] <- pvals
+results[['Reject Null, Revenue']] <- pvals < 0.05 / n
+```
+
+```{r, include=TRUE}
+for (i in 1:n) {
+  DT$FVL <- DT[, .(FVL=shift(.(Franch_Val), type="lead", n=i)[[1L]]), by=Team]$FVL
+  DT$PC_FVL <- DT$FVL / DT$Franch_Val
+  
+  png(paste('./Figures/fvl_lag_', as.character(i), '.png', sep=''))
+  boxplot(DT$PC_FVL ~ DT$Championship,
+          main=paste('Future Franchise Value vs Championship, Lag =', as.character(i)),
+          xlab='Championship indicator in year t',
+          ylab='Percentage change in franchise value at year t + Lag')
+  dev.off()
+  
+  pvals[i] <- t.test(DT$PC_FVL ~ DT$Championship, alternative='less')[3]$p.value
+}
+```
+
+```{r, include=TRUE}
+results[['P-Values, Franchise Value']] <- pvals
+results[['Reject Null, Franchise Value']] <- pvals < 0.05 / n
+```
+
+```{r, include=TRUE}
+results
+```
+
+\textbf{Data Preparation - Part 2}:
+
+```{r, include=TRUE}
+data$FR <- DT[, .(RL=shift(.(Revenue), type="lead", n=1)[[1L]]), by=Team]$RL
+data$PC <- data$FR / data$Revenue
+
+data$FVL <- DT[, .(FVL=shift(.(Franch_Val), type="lead", n=1)[[1L]]), by=Team]$FVL
+data$PC_FVL <- data$FVL / data$Franch_Val
+
+data
+```
+
+Histogram of PC:
+```{r, include=TRUE}
+hist(data$PC)
+```
+
+Histogram of PC_FVL:
+```{r, include=TRUE}
+hist(data$PC_FVL)
+```
+
+Log-Transformations:
+```{r, include=TRUE}
+data$PC_FVL <- log(data$PC_FVL)
+data$Revenue <- log(data$Revenue)
+data$Ticket <- log(data$Ticket)
+data$Population <- log(data$Population)
+data$Income <- log(data$Income)
+data$Followers <- log(data$Followers)
+data$Franch_Val <- log(data$Franch_Val)
+```
+
+Set COVID indicator:
+```{r, include=TRUE}
+data$COVID <- as.numeric(data$Year == 2020)
+data
+```
+
+Teams for Validation Set:
+```{r, include=TRUE}
+teams.val <- sample(teams, 3)
+teams.val
+```
+
+Training Data:
+```{r, include=TRUE}
+data.train <- data[!(data$Team %in% teams.val) & (data$Year != 2021), ]
+data.train.revenue <- subset(data.train, select = -c(FVL, PC_FVL))
+row.names(data.train.revenue) <- NULL
+tail(data.train.revenue)
+```
+
+```{r, include=TRUE}
+data.train.franch.val <- subset(data.train, select = -c(FR, PC))
+row.names(data.train.franch.val) <- NULL
+```
+
+```{r, include=TRUE}
+data.val <- data[(data$Team %in% teams.val) & (data$Year != 2021), ]
+data.val
+```
+
+\textbf{Baseline Models}:
+
+```{r, include=TRUE}
+baseline1 <- lm(PC ~ . - FR - Team, data=data.train.revenue)
+```
+
+```{r, include=TRUE}
+plot(baseline1)
+```
+```{r, include=TRUE}
+data.train.revenue[c(12, 260),]
+```
+
+```{r, include=TRUE}
+data.train.revenue <- data.train.revenue[-c(12, 260),]
+row.names(data.train.revenue) <- NULL
+```
+
+```{r, include=TRUE}
+baseline1 <- lm(PC ~ . - FR - Team, data=data.train.revenue)
+
+summary(baseline1)
+
+print('BIC:')
+print(BIC(baseline1))
+```
+
+```{r, include=TRUE}
+baseline2 <- lm(PC_FVL ~ . - FVL - Team, data=data.train.franch.val)
+```
+
+```{r, include=TRUE}
+plot(baseline2)
+```
+
+```{r, include=TRUE}
+data.train.franch.val[c(222, 114),]
+```
+
+```{r, include=TRUE}
+data.train.franch.val <- data.train.franch.val[-c(222, 114),]
+row.names(data.train.franch.val) <- NULL
+```
+
+```{r, include=TRUE}
+baseline2 <- lm(PC_FVL ~ . - FVL - Team, data=data.train.franch.val)
+
+summary(baseline2)
+
+print('BIC:')
+print(BIC(baseline2))
+```
+
+\textbf{Intercept Models}:
+
+```{r, include=TRUE}
+intercept1 <- lm(PC ~ 1, data=data.train.revenue)
+summary(intercept1)
+print('BIC:')
+print(BIC(intercept1))
+```
+
+```{r, include=TRUE}
+intercept2 <- lm(PC_FVL ~ 1, data=data.train.franch.val)
+summary(intercept2)
+print('BIC:')
+print(BIC(intercept2))
+```
+
+\textbf{Full Models}: 
+
+```{r, include=TRUE}
+full1 <- lm(PC ~ (.-FR-Team)^2, data=data.train.revenue)
+summary(full1)
+print('BIC:')
+print(BIC(full1))
+```
+```{r, include=TRUE}
+full2 <- lm(PC_FVL ~ (.-FVL-Team)^2, data=data.train.franch.val)
+summary(full2)
+print('BIC:')
+print(BIC(full2))
+```
+
+\textbf{Stepwise Models}
+
+```{r, include=TRUE}
+stepwise1 = step(intercept1,
+                 scope=list(lower = formula(intercept1), upper = formula(full1)),
+                 direction = "both", trace = 0)
+summary(stepwise1)
+print('BIC:')
+print(BIC(stepwise1))
+```
+
+```{r, include=TRUE}
+stepwise2 = step(intercept2,
+                 scope=list(lower = formula(intercept2), upper = formula(full2)),
+                 direction = "both", trace = 0)
+summary(stepwise2)
+print('BIC:')
+print(BIC(stepwise2))
+```
+
+\textbf{Mixed Effects Models}
+
+```{r, include=TRUE}
+require(lme4)
+require(modelsummary)
+```
+
+```{r, include=TRUE}
+mm0.pc <- lmer(PC ~ (1 | Year), data=data.train.revenue, REML=FALSE)
+summary(mm0.pc)
+
+print('BIC:')
+print(BIC(mm0.pc))
+
+print('Conditional R Squared:')
+cor(predict(mm0.pc, data.train.revenue), data.train.revenue$PC)^2
+```
+
+```{r, include=TRUE}
+mm0.fvl <- lmer(PC_FVL ~ (1 | Year), data=data.train.franch.val, REML=FALSE)
+summary(mm0.fvl)
+
+print('BIC:')
+print(BIC(mm0.fvl))
+
+print('Conditional R Squared:')
+cor(predict(mm0.fvl, data.train.franch.val), data.train.franch.val$PC_FVL)^2
+```
+
+```{r, include=TRUE}
+mm1.fvl <- lmer(PC_FVL ~ Income + WP + (1 | Year), data=data.train.franch.val, REML=FALSE)
+summary(mm1.fvl)
+
+print('BIC:')
+print(BIC(mm1.fvl))
+
+print('Conditional R Squared:')
+cor(predict(mm1.fvl, data.train.franch.val), data.train.franch.val$PC_FVL)^2
+```
+
+\textbf{Validation}:
+
+```{r, include=TRUE}
+cor(predict(mm0.pc, data.val), data.val$PC)^2
+```
+
+```{r, include=TRUE}
+cor(predict(mm1.fvl, data.val), data.val$PC_FVL)^2
+```
+
+
+
